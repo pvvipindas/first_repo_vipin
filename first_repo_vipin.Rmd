@@ -2,7 +2,9 @@
 title: "Untitled"
 author: "Vipindas"
 date: "2023-12-15"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -29,6 +31,13 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 ```{r}
-plot(cars)
+plot(cars, col = "red", xlab = "speed", ylab = "distance")
+```
+```{r,cars-summary}
+library(knitr)
+kable(summary(cars))
+```
+```{r}
+plot(cars, col = "blue", xlab = "speed(km)", ylab = "distance")
 ```
 
